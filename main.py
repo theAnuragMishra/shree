@@ -1,3 +1,5 @@
+import random
+
 import hikari
 import lightbulb
 
@@ -12,4 +14,12 @@ bot = lightbulb.BotApp(token=TOKEN, default_enabled_guilds=(947433833660317706,9
 
 bot.load_extensions_from('./extensions')
 
-bot.run()
+bot_status = random.choice(["Shree Ram Stuti", "the Hanuman Chalisa", "Shiv Tandav Strotam", "Rudrashtakam",])
+bot.run(
+    status=hikari.Status.ONLINE,
+    activity=hikari.Activity(
+        name=f"{bot_status}",
+        type=hikari.ActivityType.LISTENING,
+    ),
+)
+
