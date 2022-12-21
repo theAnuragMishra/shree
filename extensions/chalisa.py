@@ -3,7 +3,7 @@ import lightbulb
 
 plugin = lightbulb.Plugin('chalisa')
 
-def load(bot: lightbulb.Botapp) -> None:
+def load(bot: lightbulb.BotApp) -> None:
     bot.add_plugin(plugin)
 
 @plugin.command
